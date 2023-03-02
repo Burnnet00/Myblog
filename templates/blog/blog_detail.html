@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<! -- шаблон 1 странички *>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Блог</title>
+</head>
+<body>
+<div>
+    <div>
+        <ul>
+            <li><a href="/" class="activ">Главная</a> </li>
+        </ul>
+    </div>
+
+    <div>
+        <h3>{{ post.title }}</h3>
+        <p align="center">
+            <img src="{{ post.img.url }}" width="50%"/>
+        </p>
+        <div>
+
+        </div>
+        <div>
+
+            <p>{{ post.description }}</p>
+            <p>{{ post.autor }}</p>
+        </div>
+        <div class="comment">
+            <h3>Оставить коментарий</h3>
+            <div>
+
+                <form action="#"method="post">
+                    <div>
+                        <label>Ваш коментарий</label>
+                        <textarea name="text_comments"></textarea>
+                    </div>
+                    <div>
+                        <label>Ваше имя*</label>
+                        <input type="text" name="name" >
+                    </div>
+                    <div>
+                        <label>Ваш email*</label>
+                        <input type="email" name="email" >
+                    </div>
+
+                    <div><input type="submit"></div>
+                </form>
+            </div>
+
+        </div>
+
+
+    </div>
+</div>
+</body>
+</html>

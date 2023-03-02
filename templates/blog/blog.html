@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<! -- шаблон главной странички *>
+<html lang="en">
+<link rel="shortcuut icon" href="css/image/favicon.ico">
+<head>
+    <meta charset="UTF-8">
+    <title>Блог</title>
+</head>
+<body>
+    <div>
+        <div>
+            <ul>
+                <li><a href="/" class="activ">Главная</a> </li>
+                <li><a href="/admin" class="activ">Админ панель</a> </li>
+            </ul>
+        </div>
+        <h3>Записи</h3>
+        {%for post in post_list %}
+        <div>
+            <a href="\"><img src="{{ post.img.url }}" width="200px"/></a>
+        </div>
+        <div>
+            <h4><a href="{{ post.id }}"> {{ post.title }}</a></h4>
+            <p>{{ post.description }}</p>
+            <p>{{ post.autor }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
